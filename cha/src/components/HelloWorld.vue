@@ -213,7 +213,7 @@ const canvas = ref<HTMLCanvasElement | null>(null);
 
   body{
       /* height: 100vh; */
-      /* background: #146C94 !important; */
+      background: red !important;
       font-family: sans-serif;
   }
 

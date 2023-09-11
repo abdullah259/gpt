@@ -1,5 +1,5 @@
 <script setup >
-import GamePageVue from "../components/GamePage.vue";
+import GamePageVue from '../components/HelloWorld.vue'
 </script>
 
 <template>

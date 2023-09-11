@@ -1,28 +1,11 @@
+version: '3'
 services:
-  # backend:
-  #   image: node:19
-  #   container_name: backend
-  #   ports:
-  #     - "3000:3000"
-  #   restart: always
-  #   volumes:
-  #     - ./backend:/app/backend
-  #   working_dir: /app/backend
-  #   command: >
-  #     bash -c "sleep infinity"
-  # database:
-  #   image: postgres:13
-  #   environment:
-  #     POSTGRES_USER: postgres
-  #     POSTGRES_PASSWORD: 123
-  #     POSTGRES_DB: postgres
-  #   ports:
-  #     - "5432:5432"
   frontend:
-    build: ./frontend  # Docker will look for Dockerfile in this directory
+    build: ./cha  # Docker will look for Dockerfile in this directory
     container_name: frontend
     ports:
-      - "8080:8080"
+      - "3000:3000"
     volumes:
-      - ./frontend:/app/frontend
+      - ./cha/src:/app/frontend/src
+      - ./cha/index.html:/app/frontend/index.html
     working_dir: /app/frontend
